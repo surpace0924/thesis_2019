@@ -1,4 +1,4 @@
-\documentclass[autodetect-engine, dvipdfmx-if-dvi, ja=standard, 12pt]{bxjsarticle}
+\documentclass[autodetect-engine, dvipdfmx-if-dvi, ja=standard, 12pt]{bxjsbook}
 
 \usepackage{graphicx}        %図を表示するのに必要
 \usepackage{color}           %jpgなどを表示するのに必要
@@ -8,25 +8,24 @@
 \usepackage{here}
 \usepackage{fancyhdr}
 \usepackage{ascmac}
+% \usepackage{titlesec}
 
 \parindent = 0pt  % 行頭の字下げをしない
 \setstretch{1.3}  % 行間を広めにとる
 
-\title{モデルベースによるRADARセンシングシステムの構築}
-\author{佐藤凌雅}
-\date{}
-
-
-% ヘッダとフッタの設定
-\lhead{}
-\chead{}
-\rhead{5E　20番　佐藤凌雅}
-\lfoot{}
-\cfoot{\thepage} % ページ数
-\rfoot{}
+% 各章，節などタイトルの大きさを変更
+% \titleformat*{\section}{\Huge\bfseries}
+% \titleformat*{\subsection}{\Large\bfseries}
 
 % 式の番号を(senction_num.num)のようにする
 \makeatletter
-\@addtoreset{equation}{section}
-\def\theequation{\thesection.\arabic{equation}}
+\@addtoreset{equation}{chapter}
+\def\theequation{\thechapter.\arabic{equation}}
 \makeatother
+
+% 呼び出したページのページ番号を消す
+\newcommand{\deletePageNum}{
+    \thispagestyle{empty}
+    \clearpage
+    \addtocounter{page}{-1}
+}
