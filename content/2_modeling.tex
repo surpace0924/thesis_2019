@@ -1,11 +1,19 @@
 \chapter{車載センシング技術}
 \section{車体モデル}
 　車両と歩行者との衝突はまっすぐな道路上で起こることがほとんどであり，モデルを単純化するために直線運動のみを考慮した車両の車体モデルを図1に示す．\\
-\begin{figure}[t]
+\newpage
+\begin{figure}[H]
     \centering
-    \includegraphics[width=14cm]{./fig/comparison_1.png}
-    \caption{車両のシャシーモデル}
+    \includegraphics[width=12cm]{./fig/comparison_raw.pdf}
+    \caption{LiDARとRADARの比較}
 \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{./fig/comparison_filtered60.pdf}
+    \caption{フィルタ後}
+\end{figure}
+
+
 
 　図1に示すように，車両の車体の運動学とダイナミクスは次のとおり．\\
 \begin{flalign}
