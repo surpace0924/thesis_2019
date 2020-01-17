@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from datetime import datetime
 import matplotlib.dates as mdates
+from statistics import mean, median,variance,stdev
 
 # 配色リスト[青，赤，緑，黄，紫，水色]
 color_list = ["#296fbc","#cb360d", "#3d9435", "#e1aa13", "#a54675", "#138bae"]
@@ -106,3 +107,14 @@ plt.legend()
 
 # 表示
 plt.show()
+
+data = y_L
+m = mean(data)
+median = median(data)
+variance = variance(data)
+stdev = stdev(data)
+print('平均: {0:.8f}'.format(m))
+print('中央値: {0:.8f}'.format(median))
+print('分散: {0:.8f}'.format(variance))
+print('標準偏差: {0:.8f}'.format(stdev))
+
