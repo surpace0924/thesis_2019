@@ -1,0 +1,67 @@
+\chapter{RADARの有用性の検証}
+　2章でRADARは照度の変化に対してロバストであると述べた．この章ではRADARとLiDARの環境依存性について検証を行う．
+
+\section{検証手法}
+\subsection{センサ}
+　RADARは第3章で示したものを使用した．また，比較対象としてRADARと同じ価格帯のLiDARを用意した．使用したLiDARの性能と外観を表\ref{tab:lidar_spec_table}，図\ref{fig:lidar}に示す．\cite{lidar_datasheet}
+
+\begin{table}[htbp]
+    \centering
+    \caption{LiDARの性能}
+    \input{table/lidar_spec_table.tex}
+    \label{tab:lidar_spec_table}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{./fig/lidar.jpg}
+    \caption{測定に使用したLiDAR}
+    \label{fig:lidar}
+\end{figure}
+
+なお，LiDARは仕様上，全方向（ヨー角360度）をスキャンするが，今回の実験では壁側の1本のレーザーだけ使用する．
+
+\subsection{実験環境}
+　壁との距離をセンサで24時間計測する．この際の実験環境を表\ref{tab:comp_env_table}，実験の様子を図\ref{fig:comparison_measure_environment}に示す．
+
+\begin{table}[htbp]
+    \centering
+    \caption{実験環境}
+    \input{table/comp_env_table.tex}
+    \label{tab:comp_env_table}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8cm]{./fig/comparison_measure_environment.jpg}
+    \caption{RADARとLiDARの比較実験の様子}
+    \label{fig:comparison_measure_environment}
+\end{figure}
+
+\section{測定結果}
+　RADAR，LiDARから得られた観測データを図\ref{fig:comparison_raw}に示す．また，センサの平均値，分散値を表\ref{tab:comp_result_table}にまとめる．
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=11cm]{./fig/comparison_raw.pdf}
+    \caption{LiDARとRADARの測定値の推移}
+    \label{fig:comparison_raw}
+\end{figure}
+
+\begin{table}[htbp]
+    \centering
+    \caption{実験結果}
+    \input{table/comp_result_table.tex}
+    \label{tab:comp_result_table}
+\end{table}
+
+
+この後の考察を行いやすくするため，図\ref{fig:comparison_raw}のデータに対して移動平均フィルタを施した．フィルタ処理後のデータを図\ref{fig:comparison_filtered60}に示す．
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=11cm]{./fig/comparison_filtered60.pdf}
+    \caption{LiDARとRADARの測定値の推移（移動平均フィルタ処理後）}
+    \label{fig:comparison_filtered60}
+\end{figure}
+
+\section{結論}
+　
