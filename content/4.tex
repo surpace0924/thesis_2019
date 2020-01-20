@@ -19,7 +19,7 @@
     \label{fig:lidar}
 \end{figure}
 
-なお，LiDARは仕様上，全方向（ヨー角360度）をスキャンするが，今回の実験では壁側の1本のレーザーだけ使用する．
+　なお，LiDARは仕様上，全方向（ヨー角360度）をスキャンするが，今回の実験では壁側の1本のレーザーだけ使用する．
 
 \subsection{実験環境}
 　壁との距離をセンサで24時間計測する．この際の実験環境を表\ref{tab:comp_env_table}，実験の様子を図\ref{fig:comparison_measure_environment}に示す．
@@ -55,7 +55,7 @@
 \end{table}
 
 
-この後の考察を行いやすくするため，図\ref{fig:comparison_raw}のデータに対して移動平均フィルタを施した．フィルタ処理後のデータを図\ref{fig:comparison_filtered60}に示す．
+　この後の考察を行いやすくするため，図\ref{fig:comparison_raw}のデータに対して移動平均フィルタを施した．フィルタ処理後のデータを図\ref{fig:comparison_filtered60}に示す．
 \begin{figure}[H]
     \centering
     \includegraphics[width=11cm]{./fig/comparison_filtered60.pdf}
@@ -64,4 +64,6 @@
 \end{figure}
 
 \section{結論}
-　
+　表\ref{tab:comp_result_table}からLiDARと比較してRADARの方が値のばらつきが小さいことがわかった．しかし，LiDARとRADARでは測定原理が異なるため，単純にこのデータだけでRADARの方が優れているとは言い切れない．そこで，図\ref{fig:comparison_filtered60}を見ると，LiDARは時間経過に対応して得られるデータが変動している．測定を行なった2020年1月12日の一関市の日没は16:33，1月13日の日の出は6:54であった．LiDARの測定値が大きく変動している時間と日没，日の出の時間はおおよそ一致していることから，この値の変動は外からの太陽光の影響を受けたものと考えられる．\\
+　一方でRADARは24時間を通してほぼ一定の値を取り続けていた．このことから，RADARはLiDARと比較して太陽光の影響を受けにくいと考えられる．以上より，RADARは他の車載センサと比較して照度変化に対しての優位性があると結論づける．
+
