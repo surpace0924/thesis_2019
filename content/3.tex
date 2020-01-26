@@ -5,8 +5,9 @@
 
 \section{本研究で使用するRADAR}
 
+
 \section{RADARの有用性の検証}
-　RADARは照度の変化に対してロバストであると述べた．ここではRADARとLiDARの環境依存性について検証を行う．
+　RADARは環境の変化に対してロバストであると述べた．ここではRADARとLiDARの環境依存性について検証を行う．
 
 \subsection{検証手法}
 \subsubsection{センサ}
@@ -25,7 +26,6 @@
     \caption{測定に使用したLiDAR}
     \label{fig:lidar}
 \end{figure}
-
 　なお，LiDARは仕様上，全方向（ヨー角360度）をスキャンするが，今回の実験では壁側の1本のレーザーだけ使用する．
 
 \subsubsection{実験環境}
@@ -62,7 +62,7 @@
 \end{table}
 
 
-　この後の考察を行いやすくするため，図\ref{fig:comparison_raw}のデータに対して移動平均フィルタを施した．フィルタ処理後のデータを図\ref{fig:comparison_filtered60}に示す．
+　図\ref{fig:comparison_raw}のデータに対して移動平均フィルタを施した．フィルタ処理後のデータを図\ref{fig:comparison_filtered60}に示す．
 \begin{figure}[H]
     \centering
     \includegraphics[width=11cm]{./fig/comparison_filtered60.pdf}
@@ -71,6 +71,6 @@
 \end{figure}
 
 \subsection{結論}
-　表\ref{tab:comp_result_table}からLiDARと比較してRADARの方が値のばらつきが小さいことがわかった．しかし，LiDARとRADARでは測定原理が異なるため，単純にこのデータだけでRADARの方が優れているとは言い切れない．そこで，図\ref{fig:comparison_filtered60}を見ると，LiDARは時間経過に対応して得られるデータが変動している．測定を行なった2020年1月12日の一関市の日没は16:33，1月13日の日の出は6:54であった．LiDARの測定値が大きく変動している時間と日没，日の出の時間はおおよそ一致していることから，この値の変動は外からの太陽光の影響を受けたものと考えられる．\\
-　一方でRADARは24時間を通してほぼ一定の値を取り続けていた．このことから，RADARはLiDARと比較して太陽光の影響を受けにくいと考えられる．以上より，RADARは他の車載センサと比較して照度変化に対しての優位性があると結論づける．
+　表\ref{tab:comp_result_table}からLiDARと比較してRADARの方が値のばらつきが小さいことがわかった．しかし，LiDARとRADARでは測定原理が異なるため，単純にこのデータだけでRADARの方が優れているとは言い切れない．そこで，図\ref{fig:comparison_filtered60}を見ると，LiDARは時間経過に対応して得られるデータが変動している．測定を行なった2020年1月12日の一関市の日没は16:33，1月13日の日の出は6:54であった．LiDARの測定値が大きく変動している時間と日没，日の出の時間はおおよそ一致していることから，この値の変動は外からの太陽光の影響を受けた可能性がある．また，測定を行なった部屋では温度，湿度の管理を行なっていなかったため，光以外の環境的要因によって測定値にばらつきが出た可能性も考えられる．\\
+　一方でRADARは24時間を通してほぼ一定の値を取り続けていた．このことから，RADARはLiDARと比較して外乱の影響を受けにくいと考えられる．以上より，RADARは他の車載センサと比較して環境変化に対しての優位性があると結論づける．
 
