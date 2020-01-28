@@ -1,10 +1,44 @@
 \chapter{RADAR}
-　この章ではRADARの基本原理，研究に使用するRADARの性能，LiDARとの比較を行う．
+　この章ではRADARの基本原理，研究に使用するRADARの性能を示し，LiDARとの比較を行う．
 
-\section{測定原理}
+\section{ミリ波RADAR}
+\subsection{RADAR}
+　RADARは電波を発射し遠方にある目標物を検知し，そこまでの距離を測る電波検知装置である\cite{RADAR_book}．
+　RADARシステムは以下のような簡易なブロック図（図　）で表される．
+
+\begin{itemize}
+    \item \textbf{送信アンテナ部}\\
+        電波を効率よく物標に放射し，反射波を捉える装置
+    \item \textbf{信号処理部}\\
+        受信したデータ列を検出や測距など目的を達するために行うソフトウェア処理
+    \item \textbf{検波部}\\
+        受信波を信号処理しやすい信号形式に変換する装置
+\end{itemize}
+
+　例えば，RADARではパルス波（矩形波）を図　のように物標方向に照射し，その反射信号から距離に対する反射強度を得ることができる．物標の位置はこの反射波の強度のピークが発生している箇所に存在すると考えることができる．なお，この反射強度は物体の比誘電率に依存する．障害物のない箇所でも空気による若干の反射は発生するが，空気の比誘電率は物標より小さくなるため反射は少なくなり，物標の検知が可能となる．
+
+\subsection{ミリ波}
+　ミリ波の波長は図\ref{fig:ClassificationOfRadioWaves}に示すように1mm～10mmと非常に短い．波長が1cm以下のマイクロ波と比較した際の特徴をいかに述べる\cite{feature_RadioWaves}．
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=10cm]{./fig/ClassificationOfRadioWaves.png}
+    \caption{電波の分類\cite{soumu_RadioWaves}}
+    \label{fig:ClassificationOfRadioWaves}
+\end{figure}
+
+\begin{enumerate}
+    \item \textbf{広帯域性}\\
+        RADARの分解能は帯域幅の逆数となる．ミリ波は広い帯域幅を利用できるため高分解能・高精度化が可能となる．
+    \item \textbf{装置の小型軽量化}\\
+        アンテナ開口径は波長に比例するため，周波数が高いほど，装置サイズを小さくできる．
+    \item \textbf{鋭い指向性}\\
+        空間的に高密度の利用が可能となる．また，お互いの電波の干渉も低くできる．
+\end{enumerate}
+
 
 \section{本研究で使用するRADAR}
-
+　
 
 \section{RADARの有用性の検証}
 　RADARは環境の変化に対してロバストであると述べた．ここではRADARとLiDARの環境依存性について検証を行う．
