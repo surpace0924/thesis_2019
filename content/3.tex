@@ -22,21 +22,15 @@
         受信波を信号処理しやすい信号形式に変換する装置
 \end{itemize}
 
-　例えば，RADARではパルス波（矩形波）を図　のように物標方向に照射し，その反射信号から距離に対する反射強度を得ることができる．物標の位置はこの反射波の強度のピークが発生している箇所に存在すると考えることができる．なお，この反射強度は物体の比誘電率に依存する．障害物のない箇所でも空気による若干の反射は発生するが，空気の比誘電率は物標より小さくなるため反射は少なくなり，物標の検知が可能となる．
-\begin{figure}[htbp]
-    \begin{minipage}{0.4\hsize}
-        \centering
-        \includegraphics[width=4cm]{./fig/RADAR_Block.png}
-        \caption{一つめの図}
-        \label{fig:one}
-    \end{minipage}
+　例えば，RADARではパルス波（矩形波）を図\ref{fig:RADAR_Demo}のように物標方向に照射し，その反射信号から距離に対する反射強度を得ることができる．物標の位置はこの反射波の強度のピークが発生している箇所に存在すると考えることができる．なお，この反射強度は物体の比誘電率に依存する．障害物のない箇所でも空気による若干の反射は発生するが，空気の比誘電率は物標より小さくなるため反射は少なくなり，物標の検知が可能となる．
 
-    \begin{minipage}{0.4\hsize}
-        \centering
-        \includegraphics[width=4cm]{./fig/RADAR_Block.png}
-        \caption{二つめの図}
-        \label{fig:two}
-    \end{minipage}
+\begin{figure}
+	\subfigure{%
+		\includegraphics[clip, width=0.35\columnwidth]{./fig/RADAR_Demo.png}}%
+	\subfigure{%
+		\includegraphics[clip, width=0.65\columnwidth]{./fig/RADAR_Demo_Graph.png}}%
+	\caption{物体の位置と反射強度の関係}
+	\label{fig:RADAR_Demo}
 \end{figure}
 
 
