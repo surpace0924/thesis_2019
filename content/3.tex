@@ -53,14 +53,35 @@
         空間的に高密度の利用が可能となる．また，お互いの電波の干渉も低くできる．
 \end{enumerate}
 
-
 \section{本研究で使用するRADAR}
-　本研究ではAcconeer社製のXC112/XR112評価キットを用いる．この評価キットは同社製のA111というパルスRADARを搭載したRADARセンサボード（XR112）とRaspberryPiとの接続用コネクタボード（XC112）から構成される．評価キットのブロック図を図に示す．
+　本研究ではAcconeer社製のXC112/XR112評価キットを用いる．この評価キットは同社製のA111というパルスRADARを搭載したRADARセンサボード（XR112）とRaspberryPiとの接続用コネクタボード（XC112）から構成される．図\ref{fig:EVK_Img}にXC112およびXR112の外観を示す．
+\begin{figure}[H]
+    \centering
+    \subfigure[XC112\cite{XC112ProductBrief}]{%
+        \includegraphics[clip, width=0.3\columnwidth]{./fig/XC112.png}}%
+    \subfigure[XR112\cite{XR112ProductBrief}]{%
+        \includegraphics[clip, width=0.3\columnwidth]{./fig/XR112.png}}%
+    \caption{評価キットの外観}
+    \label{fig:EVK_Img}
+\end{figure}
 
+評価キットのブロック図を図\ref{fig:EVK_Block}に示す．
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8.5cm]{./fig/EVK_Block.png}
+    \caption{XC112/XR112評価キットのブロック図\cite{XC112_XR112UserGuide}}
+    \label{fig:EVK_Block}
+\end{figure}
 
+　この評価キットは図\ref{fig:EVK_Block}にもあるように，シングルボードコンピュータのRaspberryPiを使用することを想定しており，本研究でもRaspberryPiをRADAR制御用コンピュータとして使用した．図\ref{fig:EVK_Connection}にRaspberryPiとRADARを接続した様子を示す．
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=8.5cm]{./fig/EVK_Block.png}
+    \caption{評価キットとRADAR}
+    \label{fig:EVK_Connection}
+\end{figure}
 
-
-
+評価キットに使用されているA111は周波数60GHz（波長 5 mm）のミリ波RADARである\cite{XC112_XR112UserGuide}．
 
 
 \section{RADARの有用性の検証}
