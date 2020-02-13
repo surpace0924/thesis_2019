@@ -1,0 +1,37 @@
+\documentclass[autodetect-engine, dvipdfmx-if-dvi, ja=standard, 12pt]{bxjsbook}
+
+\usepackage{graphicx}        %図を表示するのに必要
+\usepackage{color}           %jpgなどを表示するのに必要
+\usepackage{amsmath,amssymb} %数学記号を出すのに必要
+\usepackage{setspace}
+\usepackage{cases}
+\usepackage{here}
+\usepackage{fancyhdr}
+\usepackage{ascmac}
+\usepackage{url}
+% \usepackage{titlesec}
+\usepackage{subfigure}
+
+
+\parindent = 0pt  % 行頭の字下げをしない
+\setstretch{1.3}  % 行間を広めにとる
+
+% 各章，節などタイトルの大きさを変更
+% \titleformat*{\section}{\Huge\bfseries}
+% \titleformat*{\subsection}{\Large\bfseries}
+
+% 式の番号を(senction_num.num)のようにする
+\makeatletter
+\@addtoreset{equation}{chapter}
+\def\theequation{\thechapter.\arabic{equation}}
+\makeatother
+
+% 呼び出したページのページ番号を消す
+\newcommand{\deletePageNum}{
+    \thispagestyle{empty}
+    \clearpage
+    \addtocounter{page}{-1}
+}
+
+% urlのフォントを直す
+\renewcommand\UrlFont{\rmfamily}
