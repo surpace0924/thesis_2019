@@ -20,12 +20,12 @@ fig = plt.figure(figsize=(18/2.54, 12/2.54))
 ax = fig.add_subplot(1, 1, 1)
 
 # データの読み込み
-file_name = "acc.csv"
+file_name = "diff.csv"
 p2 = np.genfromtxt(file_name, delimiter=',', filling_values = 0)
 x = p2[:, 0]
 y = p2[:, 1]
 
-file_name = "result.csv"
+file_name = "acc.csv"
 p2 = np.genfromtxt(file_name, delimiter=',', filling_values = 0)
 r_x = p2[:, 0]
 r_y = p2[:, 1]
@@ -40,7 +40,14 @@ print(detection_times)
 
 # グラフにデータを追加
 ax.plot(x, y, color = color_list[0], linewidth=1, label='acceleration')
+# ax2 = ax.twinx()
+# ax2.plot(r_x, r_y, color = color_list[2], linewidth=1, label='acceleration')
 
+
+# for data in detection_times:
+    # ax.vlines([data], min(y), max(y), color_list[0], linestyles='dotted')
+
+ax.hlines(0.7, 0, 1, color_list[0], linestyles='dashdot', label='threshold')
 ax.vlines(0.458-0.05, min(y), max(y), color_list[0], linestyles='dotted', label='detection point')
 ax.vlines(0.659-0.05, min(y), max(y), color_list[0], linestyles='dotted')
 
