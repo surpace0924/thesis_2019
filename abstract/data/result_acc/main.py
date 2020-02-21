@@ -16,7 +16,7 @@ plt.rcParams['ytick.major.width'] = 1.0 # y軸主目盛り線の線幅
 plt.rcParams['font.size'] = 9           # フォントの大きさ
 plt.rcParams['axes.linewidth'] = 0.7    # 軸の線幅edge linewidth。囲みの太さ
 
-fig = plt.figure(figsize=(18/2.54, 12/2.54))
+fig = plt.figure(figsize=(14.5/2.54, 5/2.54))
 ax = fig.add_subplot(1, 1, 1)
 
 # データの読み込み
@@ -25,24 +25,10 @@ p2 = np.genfromtxt(file_name, delimiter=',', filling_values = 0)
 x = p2[:, 0]
 y = p2[:, 1]
 
-file_name = "result.csv"
-p2 = np.genfromtxt(file_name, delimiter=',', filling_values = 0)
-r_x = p2[:, 0]
-r_y = p2[:, 1]
-
-detection_times = []
-for i in range(len(r_x)):
-    if r_y[i] == 1:
-        detection_times.append(r_x[i])
-
-print(x)
-print(detection_times)
-
 # グラフにデータを追加
 ax.plot(x, y, color = color_list[0], linewidth=1, label='acceleration')
-
-ax.vlines(0.458-0.05, min(y), max(y), color_list[0], linestyles='dotted', label='detection point')
-ax.vlines(0.659-0.05, min(y), max(y), color_list[0], linestyles='dotted')
+ax.vlines(0.405, min(y), max(y), color_list[0], linestyles='dotted', label='detection point')
+ax.vlines(0.61, min(y), max(y), color_list[0], linestyles='dotted')
 
 # 目盛のスタイル
 plt.setp(ax.get_xticklabels(), fontsize=8)
@@ -57,14 +43,14 @@ plt.setp(ax.get_yticklabels(), fontsize=8)
 # plt.ylim(0.0, 0.7)
 
 # 余白設定
-plt.subplots_adjust(bottom=0.22)
+plt.subplots_adjust(left=0.095, right=0.98, bottom=0.18, top=0.95)
 
 # グラフの軸
 plt.xlabel("time[s]", fontsize=9)
 plt.ylabel("acceleration[m/s$^2$]", fontsize=9)
 
 #グラフの凡例
-plt.legend()
+ax.legend(fancybox=False, framealpha=1, edgecolor="#000000", loc='upper right')
 
 # 表示
 plt.show()
