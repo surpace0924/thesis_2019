@@ -54,6 +54,7 @@
 
 \begin{multicols}{2}
 \fontsize{10.539pt}{15.809pt}\selectfont
+% \fontsize{11.041pt}{16.562pt}\selectfont
 
 \section{緒言}
 　自動車の走行時に生じる上下方向の振動を抑制する装置としてアクティブサスペンションが開発され，市販車に装備されるまでにその技術は進歩している．しかし，その多くはストロークセンサや加速度センサーがバネ下の動きを検知してから作動するもので，車両が段差に侵入した際の最初の衝撃を完全に吸収できない．そこで，車載センサを用いて路面の状態を測定し，車体に衝撃が加わるタイミングでサスペンションを調整することにより，既存のアクティブサスペンション技術では吸収しきれない最初の衝撃を軽減できると考える．\\
@@ -63,7 +64,7 @@
 　本研究では路面の状態を計測するRADARとしてAcconeer社製のXC112/XR112評価キットを使用した．この評価キットを分解組立型電気自動車PIUSの前方に取り付け，本校敷地内を走行しデータを取得した．このセンサから得られるデータは距離別の電波の反射強度である．反射強度のピークの位置が物体，すなわち，路面までの距離となる．RADARから得られるデータの例を図\ref{fig:abst_demo}に示す．この例では，0.205mの位置に反射強度のピークが存在するため，路面との距離は0.205mであると推測できる．
 \begin{figure}[H]
   \centering
-  \includegraphics[width=8cm]{../thesis/fig/abst_demo.pdf}
+  \includegraphics[width=8cm]{./fig/abst_demo.pdf}
   \caption{RADARから得られるデータの例}
   \label{fig:abst_demo}
 \end{figure}
@@ -73,7 +74,7 @@
 　まず，RADARの測定データをMATLABから配列形式で読み込む(1.)．電波は自由空間で距離の2乗に比例して減衰するため，それを補償する(2.)．その後，ピークが現れてるデータのインデックスを選択し(3.)，インデックス番号を実際の距離の単位に変換する(4.)．得られた路面までの距離を微分し(5.)，微分値が閾値を超えた場合は段差の検知とみなす(6.)．
 \begin{figure}[H]
   \centering
-  \includegraphics[width=8cm]{../thesis/fig/System_Block_BW.pdf}
+  \includegraphics[width=8cm]{./fig/System_Block_BW.pdf}
   \caption{システムブロック図}
   \label{fig:system_block}
 \end{figure}
@@ -83,7 +84,7 @@
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=8cm]{../thesis/fig/result_BW.pdf}
+  \includegraphics[width=8cm]{./fig/result_BW.pdf}
   \caption{測定結果}
   \label{fig:result}
 \end{figure}
