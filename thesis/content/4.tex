@@ -7,7 +7,6 @@
 \section{MATLAB/Simulink}
 　本研究では，信号処理アルゴリズムの開発にMATLAB/Simulinkを使用した．MATLABはThe MathWorks社が開発している数値解析ソフトウェアであり，その中で使うプログラミング言語の名称でもある\cite{MATLAB_MathWorks}．また，SimulinkはMATLABと統合化されたモデルベース開発のためのソフトウェアである．モデルにMATLABアルゴリズムを組み込み，シミュレーションの結果をMATLABにエクスポートして詳細な解析を行うことができる\cite{Simulink_MathWorks}．
 
-
 \section{提案システムの開発手法}
 提案システムの開発は，具体的には以下の開発プロセスに沿って行った．
 \begin{enumerate}
@@ -15,8 +14,6 @@
         RADAR信号処理アルゴリズムを構築する上で，シミュレータに入力するためのテストデータを実機から収集した．
     \item \textbf{信号処理アルゴリズム設計}\\
         RADAR信号から所望のデータ（路面の段差の有無）を算出する信号処理器をSimulink上に構築し，シミュレーションを行った．
-    \item \textbf{実装モデル設計}\\
-        信号処理アルゴリズム設計で開発されたアルゴリズムをベースに実装用モデルを設計した．
-    \item \textbf{組み込み用コード生成}\\
-        実装モデルから Real-Time Workshop Embedded Coder というCコード生成ツールを用いて，RaspberryPi上で動作する実装用ソフトウェアを自動生成した．
+    \item \textbf{アルゴリズムの検証}\\
+        事前に収集したRADAR信号のデータを解析し，アルゴリズムの有効性を検証した．
 \end{enumerate}
