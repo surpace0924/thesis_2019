@@ -26,7 +26,7 @@ x = p2[:, 0]
 y = p2[:, 1]
 
 # グラフにデータを追加
-ax.plot(x, y, color = color_list[0], linewidth=1, label='acceleration')
+ax.plot(x, y, color = color_list[0], linewidth=1, label='Differential value')
 
 ax.hlines(0.7, 0, 1, color_list[0], linestyles='dashdot', label='threshold')
 ax.vlines(0.405, min(y), max(y), color_list[0], linestyles='dotted', label='detection point')
@@ -49,7 +49,7 @@ plt.subplots_adjust(left=0.095, right=0.98, bottom=0.18, top=0.95)
 
 # グラフの軸
 plt.xlabel("time[s]", fontsize=9)
-plt.ylabel("acceleration[m/s$^2$]", fontsize=9)
+plt.ylabel("Differential value[m/s]", fontsize=9)
 
 #グラフの凡例
 ax.legend(fancybox=False, framealpha=1, edgecolor="#000000", loc='upper right')
