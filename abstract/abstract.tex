@@ -39,6 +39,7 @@
 \pagestyle{empty}                % ページ番号を消す
 \setlength\textfloatsep{0pt}     % 図の余白
 \setlength\abovecaptionskip{0pt} % 図とキャプションの余白
+\setlength\intextsep{0pt}
 \titleformat*{\section}{\fontsize{11.041pt}{16.562pt}\selectfont \bf}
 \titleformat*{\subsection}{\fontsize{11.041pt}{16.562pt}\selectfont \bf}
 
@@ -53,8 +54,8 @@
 
 
 \begin{multicols}{2}
-\fontsize{10.539pt}{15.809pt}\selectfont
-% \fontsize{11.041pt}{16.562pt}\selectfont
+% \fontsize{10.539pt}{15.809pt}\selectfont
+\fontsize{11.041pt}{16.562pt}\selectfont
 
 \section{緒言}
 　自動車の走行時に生じる上下方向の振動を抑制する装置としてアクティブサスペンションが開発され，市販車に装備されるまでにその技術は進歩している．しかし，その多くは車両が段差に侵入した際の最初の衝撃を完全に吸収することが困難である．\\
@@ -91,6 +92,7 @@
   \caption{測定結果}
   \label{fig:result_RADAR}
 \end{figure}
+\vspace{-2truemm}
 
 　ここで，図\ref{fig:result_acc}に測定走行中に車体に加わった上下方向の加速度を実線，システムが段差を検知したタイミングを破線で示す．システムは15m/s$^2$以上の加速度が加わる場合，約50ms前に段差を検知していることがわかる．\\
 　しかし，発車時や継続的な振動が加わる場合にも段差が存在すると誤検知していた．これは車両の振動によってセンサの測定値が大きく変動し，それに伴い微分値も増加してしまったためと考えられる．
@@ -103,6 +105,5 @@
 
 \section{結言}
 　本研究ではRADARを用いた路面の段差検知のシステムを構築し，検討を行った．RADARを使用することで事前に段差を検知することが可能であることがわかった．また，MATLAB/Simulinkを用いることでシステム構築の速度を向上させることもできた．今後の課題として検知精度の向上や段差の大きさの特定などが挙げられる．
-
 \end{multicols}
 \end{document}
