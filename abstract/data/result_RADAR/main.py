@@ -45,7 +45,7 @@ plt.setp(ax.get_yticklabels(), fontsize=10)
 # plt.ylim(0.0, 0.7)
 
 # 余白設定
-plt.subplots_adjust(left=0.10, right=0.98, bottom=0.21, top=0.95)
+plt.subplots_adjust(left=0.105, right=0.98, bottom=0.21, top=0.95)
 
 # グラフの軸
 plt.xlabel("Time [s]", fontsize=10)
