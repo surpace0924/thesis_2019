@@ -16,7 +16,7 @@ plt.rcParams['ytick.major.width'] = 1.0 # y軸主目盛り線の線幅
 plt.rcParams['font.size'] = 9           # フォントの大きさ
 plt.rcParams['axes.linewidth'] = 0.7    # 軸の線幅edge linewidth。囲みの太さ
 
-fig = plt.figure(figsize=(14.5/2.54, 5/2.54))
+fig = plt.figure(figsize=(14.7/2.54, 5/2.54))
 ax = fig.add_subplot(1, 1, 1)
 
 # データの読み込み
@@ -28,13 +28,13 @@ y = p2[:, 1]
 # グラフにデータを追加
 ax.plot(x, y, color = color_list[0], linewidth=1, label='Differential value')
 
-ax.hlines(0.7, 0, 1, color_list[0], linestyles='dashdot', label='threshold')
-ax.vlines(0.405, min(y), max(y), color_list[0], linestyles='dotted', label='detection point')
+ax.hlines(0.7, 0, 1, color_list[0], linestyles='dashdot', label='Threshold')
+ax.vlines(0.405, min(y), max(y), color_list[0], linestyles='dotted', label='Detection point')
 ax.vlines(0.61, min(y), max(y), color_list[0], linestyles='dotted')
 
 # 目盛のスタイル
-plt.setp(ax.get_xticklabels(), fontsize=8)
-plt.setp(ax.get_yticklabels(), fontsize=8)
+plt.setp(ax.get_xticklabels(), fontsize=10)
+plt.setp(ax.get_yticklabels(), fontsize=10)
 # ax.grid(ls="--")
 
 # グラフタイトル
@@ -45,14 +45,14 @@ plt.setp(ax.get_yticklabels(), fontsize=8)
 # plt.ylim(0.0, 0.7)
 
 # 余白設定
-plt.subplots_adjust(left=0.095, right=0.98, bottom=0.18, top=0.95)
+plt.subplots_adjust(left=0.10, right=0.98, bottom=0.21, top=0.95)
 
 # グラフの軸
-plt.xlabel("time[s]", fontsize=9)
-plt.ylabel("Differential value[m/s]", fontsize=9)
+plt.xlabel("Time [s]", fontsize=10)
+plt.ylabel("Differential value [m/s]", fontsize=10)
 
 #グラフの凡例
-ax.legend(fancybox=False, framealpha=1, edgecolor="#000000", loc='upper right')
+ax.legend(fancybox=False, framealpha=1, edgecolor="#000000", loc='upper right', fontsize=9)
 
 # 表示
 plt.show()
