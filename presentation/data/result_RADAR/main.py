@@ -16,7 +16,7 @@ plt.rcParams['ytick.major.width'] = 1.0 # y軸主目盛り線の線幅
 plt.rcParams['font.size'] = 9           # フォントの大きさ
 plt.rcParams['axes.linewidth'] = 0.7    # 軸の線幅edge linewidth。囲みの太さ
 
-fig = plt.figure(figsize=(14.7/2.54, 5/2.54))
+fig = plt.figure(figsize=(16/2.54, 5/2.54))
 ax = fig.add_subplot(1, 1, 1)
 
 # データの読み込み
@@ -28,9 +28,9 @@ y = p2[:, 1]
 # グラフにデータを追加
 ax.plot(x, y, color = color_list[0], linewidth=1, label='Differential value')
 
-ax.hlines(0.7, 0, 1, color_list[3], linestyles='dashdot', label='Threshold')
-ax.vlines(0.405, min(y), max(y), color_list[2], linestyles='dotted', label='Detection point')
-ax.vlines(0.61, min(y), max(y), color_list[2], linestyles='dotted')
+ax.hlines(0.7, 0, 1, color_list[3], label='Threshold')
+ax.vlines(0.405, min(y), max(y), color_list[2], label='Detection point')
+ax.vlines(0.61, min(y), max(y), color_list[2])
 
 # 目盛のスタイル
 plt.setp(ax.get_xticklabels(), fontsize=10)
