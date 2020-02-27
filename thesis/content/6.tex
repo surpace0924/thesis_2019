@@ -6,7 +6,7 @@
 \begin{figure}[H]
     \centering
     \includegraphics[width=11.5cm]{./fig/result_radar.pdf}
-    \caption{路面までの距離の微分値の絶対値}
+    \caption{路面までの距離の微分値の絶対値と段差検出点}
     \label{fig:result_radar}
 \end{figure}
 
@@ -15,12 +15,30 @@
 \begin{figure}[H]
     \centering
     \includegraphics[width=11.5cm]{./fig/result_acc.pdf}
-    \caption{車体に加わった上下方向の加速度}
+    \caption{車体に加わった上下方向の加速度と段差検出点}
     \label{fig:result_acc}
 \end{figure}
 
 \section{課題点}
-しかし，提案したアルゴリズムにはいくつかの問題があると考えられる．考えうる課題点を以下に述べる．
+　しかし，提案したアルゴリズムにはいくつかの問題がある．\\
+　図\ref{fig:result_acc_departure}は発車時に車体に加わった上下方向の加速度の推移と段差検出点を示している．このデータを見ると，車両の発車時（0.6秒）時点でも段差検知と判定している．しかし，実際は車両前方には段差は存在しない．
+　図\ref{fig:result_acc_curve}はカーブ終了直後の加速度と段差検出点のグラフである．0.750秒の地点で33m/s$^2$の加速度を検知してるが，それ以前での段差検知ができておらず，車体に衝撃が加わってから段差検知の判定をしている．
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=11.5cm]{./fig/result_acc_departure.pdf}
+    \caption{発車時に車体に加わった上下方向の加速度と段差検出点}
+    \label{fig:result_acc_departure}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=11.5cm]{./fig/result_acc_curve.pdf}
+    \caption{カーブ走行後に段差に侵入した際に車体に加わった上下方向の加速度と段差検出点}
+    \label{fig:result_acc_curve}
+\end{figure}
+
+　現在考えうる課題点を以下にまとめる．
 \begin{enumerate}
     \item \textbf{発車時の振動による誤検知}\\
         このシステムではRADARから得られる距離の微分値（変化量）を基準に段差の有無を検出している．発車時のような車両の運動が急変する際にRADARが出力する距離の値に影響を及ぼす可能性がある．
