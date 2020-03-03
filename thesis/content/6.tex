@@ -5,7 +5,7 @@
 　取得したRADARのデータを前章で構築したアルゴリズムに入力し，動作を確認した．図\ref{fig:System_Block_Color}における「5. deffrential」の出力結果，すなわち路面までの距離の微分値の絶対値を図\ref{fig:result_radar}に示す．この値が閾値（今回は0.7）を超えた場合に段差検知とする．段差検知は図中の赤線で示した箇所で発生しており，0.405秒と0.610秒で段差を検出していた．
 \begin{figure}[H]
     \centering
-    \includegraphics[width=11.5cm]{./fig/result_radar.pdf}
+    \includegraphics[width=13cm]{./fig/result_radar.pdf}
     \caption{路面までの距離の微分値の絶対値と段差検出点}
     \label{fig:result_radar}
 \end{figure}
@@ -14,7 +14,7 @@
 　図\ref{fig:result_acc}に走行中の車両の加速度の推移を示す．システムが段差を検知した約50ms後に15m/s$^2$以上の加速度が車体に加わっていることがわかる．このことから，提案システムは車体に衝撃が加わる前に路面の段差をあらかじめ検出することができると結論づける．
 \begin{figure}[H]
     \centering
-    \includegraphics[width=11.5cm]{./fig/result_acc.pdf}
+    \includegraphics[width=13cm]{./fig/result_acc.pdf}
     \caption{車体に加わった上下方向の加速度と段差検出点}
     \label{fig:result_acc}
 \end{figure}
@@ -26,14 +26,14 @@
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=11.5cm]{./fig/result_acc_departure.pdf}
+    \includegraphics[width=13cm]{./fig/result_acc_departure.pdf}
     \caption{発車時に車体に加わった上下方向の加速度と段差検出点}
     \label{fig:result_acc_departure}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=11.5cm]{./fig/result_acc_curve.pdf}
+    \includegraphics[width=13cm]{./fig/result_acc_curve.pdf}
     \caption{カーブ走行後に段差に侵入した際に車体に加わった上下方向の加速度と段差検出点}
     \label{fig:result_acc_curve}
 \end{figure}
