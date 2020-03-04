@@ -13,6 +13,23 @@
 % \usepackage{titlesec}
 \usepackage{subfigure}
 
+\usepackage{listings}
+%ここからソースコードの表示に関する設定
+\lstset{
+    basicstyle={\ttfamily\small}, %書体の指定
+    % frame=tRBl, %フレームの指定
+    frame={tb},
+    breaklines=true, %行が長くなった場合の改行
+    linewidth=12cm, %フレームの横幅
+    lineskip=-0.5ex, %行間の調整
+    numbers=left,
+    tabsize=2 %Tabを何文字幅にするかの指定
+}
+% \lstset{
+%     frame=single,
+%     numbers=left,
+%     tabsize=2
+% }
 
 \parindent = 0pt  % 行頭の字下げをしない
 \setstretch{1.4}  % 行間を広めにとる
